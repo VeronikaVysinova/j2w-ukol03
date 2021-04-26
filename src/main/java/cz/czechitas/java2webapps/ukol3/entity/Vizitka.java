@@ -16,7 +16,6 @@ public class Vizitka {
         this.firma = firma;
         this.ulice = ulice;
         this.obecPsc = obecPsc;
-        this.celaAdresa = ulice + " " + obecPsc;
         this.email = email;
         this.telefon = telefon;
         this.web = web;
@@ -55,7 +54,7 @@ public class Vizitka {
     }
 
     public String getCelaAdresa() {
-        return celaAdresa;
+        return ulice + " " + obecPsc;
     }
 
     public String getEmail() {

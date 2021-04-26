@@ -2,7 +2,6 @@ package cz.czechitas.java2webapps.ukol3.controller;
 
 import cz.czechitas.java2webapps.ukol3.entity.Vizitka;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,10 +15,10 @@ import java.util.List;
 @RequestMapping("/")
 
 public class VizitkaController {
-  private final List<Vizitka> vizitka;
+  private final List<Vizitka> vizitky;
 
   public VizitkaController(){
-    vizitka = List.of(
+    vizitky = List.of(
             new Vizitka("Dita (Přikrylová) Formánková", "Czechitas z.s.", "Václavské náměstí 837/11", "11000 Praha 1", "dita@czechitas.cz", "+420 800123456", "www.czechitas.cz"),
             new Vizitka("Barbora Bühnová", "Czechitas z.s.", "Václavské náměstí 837/11", "11000 Praha 1", null, "+420 800123456", "www.czechitas.cz"),
             new Vizitka("Monika Ptáčníková", "Czechitas z.s.", "Václavské náměstí 837/11", "11000 Praha 1", "monika@czechitas.cz", "+420 800123456", "www.czechitas.cz"),
@@ -29,16 +28,16 @@ public class VizitkaController {
   }
 
   @GetMapping("/")
-  public ModelAndView vizitka() {
+  public ModelAndView seznam() {
     ModelAndView modelAndView = new ModelAndView("seznam");
-    modelAndView.addObject("vizitka", vizitka);
+    modelAndView.addObject("seznam", vizitky);
     return modelAndView;
   }
 
   @GetMapping("/detail")
-  public ModelAndView vizitka(int id) {
+  public ModelAndView detail(int id) {
     ModelAndView modelAndView = new ModelAndView("detail");
-    modelAndView.addObject("vizitka", vizitka.get(id));
+    modelAndView.addObject("detail", vizitky.get(id));
     return modelAndView;
   }
 }
