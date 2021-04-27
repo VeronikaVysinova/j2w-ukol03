@@ -6,7 +6,6 @@ public class Vizitka {
     private String firma;
     private String ulice;
     private String obecPsc;
-    private String celaAdresa; //(readonly property, ve tvaru „ulice, obecPsc“)
     private String email;
     private String telefon;
     private String web;
