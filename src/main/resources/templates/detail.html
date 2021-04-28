@@ -20,9 +20,9 @@
                 <div th:text="${detail.obecPsc}"> 11000 Praha 1</div>
             </div>
             <div class="kontakty">
-                <div><i class="las la-at" th:if="${detail.email !=null}"></i> <span th:text="${detail.email}">dita@czechitas.cs</span></div>
-                <div><i class="las la-phone-alt" th:if="${detail.telefon !=null}"></i> <span th:text="${detail.telefon}">+420 800123456</span></div>
-                <div><i class="las la-globe" th:if="${detail.web !=null}"></i> <span th:text="${detail.web}">www.czechitas.cz</span></div>
+                <div th:if="${detail.email} !=null"><i class="las la-at"></i> <span th:text="${detail.email}">dita@czechitas.cs</span></div>
+                <div th:if="${detail.telefon} !=null"><i class="las la-phone-alt" ></i> <span th:text="${detail.telefon}">+420 800123456</span></div>
+                <div th:if="${detail.web} !=null"><i class="las la-globe" ></i> <span th:text="${detail.web}">www.czechitas.cz</span></div>
             </div>
         </div>
     </div>
