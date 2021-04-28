@@ -72,6 +72,19 @@ a {
     align-items: center;
 }
 
+.detail nav {
+    margin: 1em;
+    font-size: 150%;
+}
+
+.detail nav a {
+    color: white;
+}
+
+.detail nav a:hover {
+    text-decoration: underline;
+}
+
 .mapa {
     width: 36em;
     height: 36em;
